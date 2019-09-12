@@ -1,0 +1,169 @@
+/* ---------------   Border   --------------- */
+
+/* * {
+    border: 0.5px solid black;
+} */
+
+/* ---------------   HTML   --------------- */
+
+html {
+    background-image: url(./images/bulldog.jpg);
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    background-color: #F0ECEE;
+    background-attachment: fixed;
+    width: 100%;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* ---------------   Grid   --------------- */
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 3fr ;
+    grid-template-rows: auto;
+    height: auto;
+    grid-template-areas:
+    "header navigation"
+    "body body";
+    grid-column-gap: 10px;
+    grid-row-gap: 100px;
+}
+
+/* ---------------   Header   --------------- */
+
+.header {
+    grid-area: header; 
+    font-size: 1.2em;
+    margin-left: 1em;
+}
+
+.header span {
+    color: #FF4850;
+}
+
+/* ---------------   Navigation   --------------- */
+
+.nav-bar {
+    grid-area: navigation;
+}
+
+.nav-bar ul {
+    padding: 5%, 5%, 5%, 10%;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    text-align: right;
+    padding-right: 30px;
+    margin-top: 0px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #88898B;
+    transition: 0.2s;
+}
+
+.nav-bar button {
+    font-size: 1.2em;
+    display: block;
+    width: 140px;
+    background-color: #FF4850;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.nav-bar a:hover {
+    color: #FF4850;
+    transition: 0.2s;
+}
+
+.nav-bar button:hover {
+    background-color: #CCC;
+    transition: 0.2s;
+}
+
+/* --------------- Body   --------------- */
+
+.body-text {
+    grid-area: body;
+    width: 550px;
+    line-height: 4em;
+    margin-left: 2.5em;
+    margin-top: 2em;
+}
+
+.body-text h2 {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.body-text span {
+    color: #FF4850;
+}
+
+.body-text p {
+    color: #88898B;
+    font-size: 1.25em;
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+}
+
+.body-text button {
+    display: block;
+    width: 200px;
+    margin-top: 2em;
+    background-color: #FF4850;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.body-text button:hover {
+    background-color: #CCC;
+    transition: 0.2s;
+}
+
+/* ---------------   Media   --------------- */
+@media (max-width: 600px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .nav-bar ul li {
+        display: block;
+        text-align: left;
+        padding: 0.25em;
+    }
+
+    .nav-bar button {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .body-text h2 {
+        font-size: 3em;
+    }
+
+    .body-text p {
+        font-size: 1em;
+        margin-right: 100px;
+        
+    }
+
+    .body-text button {
+        width: 100%;
+    }
+}
